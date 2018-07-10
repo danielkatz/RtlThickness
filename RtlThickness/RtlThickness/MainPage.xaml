@@ -17,27 +17,28 @@
                 </DataTrigger>
             </StackLayout.Triggers>
 
-            <ContentView Padding="50,10,100,10" BackgroundColor="Red">
-                <ContentView BackgroundColor="White">
-                    <Label>Padding="50,10,100,10"</Label>
+            <ContentView BackgroundColor="Green">
+                <ContentView local:BiDi.Margin="50,10,100,10" BackgroundColor="White">
+                    <Label>BiDi.Margin="50,10,100,10"</Label>
                 </ContentView>
             </ContentView>
-            <ContentView BackgroundColor="Red">
-                <ContentView Margin="50,10,100,10" BackgroundColor="White">
-                    <Label>Margin="50,10,100,10"</Label>
-                </ContentView>
-            </ContentView>
-
             <ContentView Padding="50,10,100,10" BackgroundColor="Green">
                 <ContentView BackgroundColor="White">
                     <Label>Padding="50,10,100,10"</Label>
                 </ContentView>
             </ContentView>
-            <ContentView BackgroundColor="Green">
-                <ContentView local:BiDi.Margin="50,10,100,10" BackgroundColor="White">
+
+            <ContentView BackgroundColor="Red">
+                <ContentView Margin="50,10,100,10" BackgroundColor="White">
                     <Label>Margin="50,10,100,10"</Label>
                 </ContentView>
             </ContentView>
+            <ContentView Padding="50,10,100,10" BackgroundColor="Red">
+                <ContentView BackgroundColor="White">
+                    <Label>Padding="50,10,100,10"</Label>
+                </ContentView>
+            </ContentView>
+
         </StackLayout>
     </StackLayout>
 
