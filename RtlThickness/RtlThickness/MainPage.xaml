@@ -5,10 +5,40 @@
              x:Class="RtlThickness.MainPage">
 
     <StackLayout>
-        <!-- Place new controls here -->
-    	<Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Label Text="RTL" VerticalOptions="Center" />
+            <Switch x:Name="rtlToggle" />
+        </StackLayout>
+
+        <StackLayout>
+            <StackLayout.Triggers>
+                <DataTrigger TargetType="StackLayout" Binding="{Binding Source={x:Reference rtlToggle}, Path=IsToggled}" Value="True">
+                    <Setter Property="FlowDirection" Value="RightToLeft" />
+                </DataTrigger>
+            </StackLayout.Triggers>
+
+            <ContentView Padding="50,10,100,10" BackgroundColor="Red">
+                <ContentView BackgroundColor="White">
+                    <Label>Padding="50,10,100,10"</Label>
+                </ContentView>
+            </ContentView>
+            <ContentView BackgroundColor="Red">
+                <ContentView Margin="50,10,100,10" BackgroundColor="White">
+                    <Label>Margin="50,10,100,10"</Label>
+                </ContentView>
+            </ContentView>
+
+            <ContentView Padding="50,10,100,10" BackgroundColor="Green">
+                <ContentView BackgroundColor="White">
+                    <Label>Padding="50,10,100,10"</Label>
+                </ContentView>
+            </ContentView>
+            <ContentView BackgroundColor="Green">
+                <ContentView local:BiDi.Margin="50,10,100,10" BackgroundColor="White">
+                    <Label>Margin="50,10,100,10"</Label>
+                </ContentView>
+            </ContentView>
+        </StackLayout>
     </StackLayout>
 
 </ContentPage>
