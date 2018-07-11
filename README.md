@@ -1,7 +1,7 @@
 # RtlThickness
 A simple polyfill for `FlowDirection` aware `Margin` on Xamarin.Forms 3.1
 
-Currently, Xamarin Forms 3.1 has asymmetrical support for `FlowDirection` in Thickness type properties; While `Padding` respects the element's `FlowDirection`, `Margin` does not.
+Currently, Xamarin Forms 3.1 has an inconsistent support for `FlowDirection` in Thickness typed properties; While `Padding` respects the element's `FlowDirection`, `Margin` does not.
 (see [Issue 3066](https://github.com/xamarin/Xamarin.Forms/issues/3066))
 
 
